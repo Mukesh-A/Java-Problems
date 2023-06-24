@@ -18,27 +18,26 @@ public class StackMatchBracket {
                 if (sc.peek() == '{') {
                     System.out.println("1" + sc.peek());
                     sc.pop();
-
                     System.out.println(false);
-                    return;
+                    break;
                 } else if (sc.size() == 0) {
                     System.out.println("2" + sc.peek());
                     sc.pop();
 
                     System.out.println(false);
-                    return;
-                } else if (sc.peek() != '(') {
+                    break;
+                } else if (sc.peek() == '(') {
                     System.out.println("3" + sc.peek());
                     sc.pop();
 
                     System.out.println(false);
-                    return;
-                } else if (sc.peek() != '[') {
+                    break;
+                } else if (sc.peek() == '[') {
                     System.out.println("4" + sc.peek());
                     sc.pop();
 
                     System.out.println(false);
-                    return;
+                    break;
                 } else {
                     sc.pop();
                     System.out.println("5" + sc);
